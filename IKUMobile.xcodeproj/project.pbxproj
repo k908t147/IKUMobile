@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD62F2991E7A16C200402164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F2981E7A16C200402164 /* AppDelegate.swift */; };
+		BD62F29B1E7A16C200402164 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F29A1E7A16C200402164 /* ViewController.swift */; };
+		BD62F29E1E7A16C200402164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD62F29C1E7A16C200402164 /* Main.storyboard */; };
+		BD62F2A01E7A16C200402164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD62F29F1E7A16C200402164 /* Assets.xcassets */; };
+		BD62F2A31E7A16C200402164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD62F2A11E7A16C200402164 /* LaunchScreen.storyboard */; };
+		BD62F2AE1E7A16C300402164 /* IKUMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F2AD1E7A16C300402164 /* IKUMobileTests.swift */; };
+		BD62F2B91E7A16C300402164 /* IKUMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F2B81E7A16C300402164 /* IKUMobileUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD62F2AA1E7A16C300402164 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD62F28D1E7A16C200402164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD62F2941E7A16C200402164;
+			remoteInfo = IKUMobile;
+		};
+		BD62F2B51E7A16C300402164 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD62F28D1E7A16C200402164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD62F2941E7A16C200402164;
+			remoteInfo = IKUMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD62F2951E7A16C200402164 /* IKUMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKUMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD62F2981E7A16C200402164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD62F29A1E7A16C200402164 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD62F29D1E7A16C200402164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD62F29F1E7A16C200402164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD62F2A21E7A16C200402164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD62F2A41E7A16C200402164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD62F2A91E7A16C300402164 /* IKUMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKUMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD62F2AD1E7A16C300402164 /* IKUMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKUMobileTests.swift; sourceTree = "<group>"; };
+		BD62F2AF1E7A16C300402164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD62F2B41E7A16C300402164 /* IKUMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKUMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD62F2B81E7A16C300402164 /* IKUMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKUMobileUITests.swift; sourceTree = "<group>"; };
+		BD62F2BA1E7A16C300402164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD62F2921E7A16C200402164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD62F2A61E7A16C300402164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD62F2B11E7A16C300402164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD62F28C1E7A16C100402164 = {
+			isa = PBXGroup;
+			children = (
+				BD62F2971E7A16C200402164 /* IKUMobile */,
+				BD62F2AC1E7A16C300402164 /* IKUMobileTests */,
+				BD62F2B71E7A16C300402164 /* IKUMobileUITests */,
+				BD62F2961E7A16C200402164 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD62F2961E7A16C200402164 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD62F2951E7A16C200402164 /* IKUMobile.app */,
+				BD62F2A91E7A16C300402164 /* IKUMobileTests.xctest */,
+				BD62F2B41E7A16C300402164 /* IKUMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD62F2971E7A16C200402164 /* IKUMobile */ = {
+			isa = PBXGroup;
+			children = (
+				BD62F2981E7A16C200402164 /* AppDelegate.swift */,
+				BD62F29A1E7A16C200402164 /* ViewController.swift */,
+				BD62F29C1E7A16C200402164 /* Main.storyboard */,
+				BD62F29F1E7A16C200402164 /* Assets.xcassets */,
+				BD62F2A11E7A16C200402164 /* LaunchScreen.storyboard */,
+				BD62F2A41E7A16C200402164 /* Info.plist */,
+			);
+			path = IKUMobile;
+			sourceTree = "<group>";
+		};
+		BD62F2AC1E7A16C300402164 /* IKUMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD62F2AD1E7A16C300402164 /* IKUMobileTests.swift */,
+				BD62F2AF1E7A16C300402164 /* Info.plist */,
+			);
+			path = IKUMobileTests;
+			sourceTree = "<group>";
+		};
+		BD62F2B71E7A16C300402164 /* IKUMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD62F2B81E7A16C300402164 /* IKUMobileUITests.swift */,
+				BD62F2BA1E7A16C300402164 /* Info.plist */,
+			);
+			path = IKUMobileUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD62F2941E7A16C200402164 /* IKUMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD62F2BD1E7A16C300402164 /* Build configuration list for PBXNativeTarget "IKUMobile" */;
+			buildPhases = (
+				BD62F2911E7A16C200402164 /* Sources */,
+				BD62F2921E7A16C200402164 /* Frameworks */,
+				BD62F2931E7A16C200402164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IKUMobile;
+			productName = IKUMobile;
+			productReference = BD62F2951E7A16C200402164 /* IKUMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD62F2A81E7A16C300402164 /* IKUMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD62F2C01E7A16C300402164 /* Build configuration list for PBXNativeTarget "IKUMobileTests" */;
+			buildPhases = (
+				BD62F2A51E7A16C300402164 /* Sources */,
+				BD62F2A61E7A16C300402164 /* Frameworks */,
+				BD62F2A71E7A16C300402164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD62F2AB1E7A16C300402164 /* PBXTargetDependency */,
+			);
+			name = IKUMobileTests;
+			productName = IKUMobileTests;
+			productReference = BD62F2A91E7A16C300402164 /* IKUMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD62F2B31E7A16C300402164 /* IKUMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD62F2C31E7A16C300402164 /* Build configuration list for PBXNativeTarget "IKUMobileUITests" */;
+			buildPhases = (
+				BD62F2B01E7A16C300402164 /* Sources */,
+				BD62F2B11E7A16C300402164 /* Frameworks */,
+				BD62F2B21E7A16C300402164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD62F2B61E7A16C300402164 /* PBXTargetDependency */,
+			);
+			name = IKUMobileUITests;
+			productName = IKUMobileUITests;
+			productReference = BD62F2B41E7A16C300402164 /* IKUMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD62F28D1E7A16C200402164 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Keshawn Triplett";
+				TargetAttributes = {
+					BD62F2941E7A16C200402164 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					BD62F2A81E7A16C300402164 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BD62F2941E7A16C200402164;
+					};
+					BD62F2B31E7A16C300402164 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BD62F2941E7A16C200402164;
+					};
+				};
+			};
+			buildConfigurationList = BD62F2901E7A16C200402164 /* Build configuration list for PBXProject "IKUMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD62F28C1E7A16C100402164;
+			productRefGroup = BD62F2961E7A16C200402164 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD62F2941E7A16C200402164 /* IKUMobile */,
+				BD62F2A81E7A16C300402164 /* IKUMobileTests */,
+				BD62F2B31E7A16C300402164 /* IKUMobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD62F2931E7A16C200402164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD62F2A31E7A16C200402164 /* LaunchScreen.storyboard in Resources */,
+				BD62F2A01E7A16C200402164 /* Assets.xcassets in Resources */,
+				BD62F29E1E7A16C200402164 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD62F2A71E7A16C300402164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD62F2B21E7A16C300402164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD62F2911E7A16C200402164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD62F29B1E7A16C200402164 /* ViewController.swift in Sources */,
+				BD62F2991E7A16C200402164 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD62F2A51E7A16C300402164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD62F2AE1E7A16C300402164 /* IKUMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD62F2B01E7A16C300402164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD62F2B91E7A16C300402164 /* IKUMobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD62F2AB1E7A16C300402164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD62F2941E7A16C200402164 /* IKUMobile */;
+			targetProxy = BD62F2AA1E7A16C300402164 /* PBXContainerItemProxy */;
+		};
+		BD62F2B61E7A16C300402164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD62F2941E7A16C200402164 /* IKUMobile */;
+			targetProxy = BD62F2B51E7A16C300402164 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD62F29C1E7A16C200402164 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD62F29D1E7A16C200402164 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD62F2A11E7A16C200402164 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD62F2A21E7A16C200402164 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD62F2BB1E7A16C300402164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD62F2BC1E7A16C300402164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD62F2BE1E7A16C300402164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IKUMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IKU.IKUMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BD62F2BF1E7A16C300402164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IKUMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IKU.IKUMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BD62F2C11E7A16C300402164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IKUMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IKU.IKUMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IKUMobile.app/IKUMobile";
+			};
+			name = Debug;
+		};
+		BD62F2C21E7A16C300402164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IKUMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IKU.IKUMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IKUMobile.app/IKUMobile";
+			};
+			name = Release;
+		};
+		BD62F2C41E7A16C300402164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IKUMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IKU.IKUMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IKUMobile;
+			};
+			name = Debug;
+		};
+		BD62F2C51E7A16C300402164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IKUMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IKU.IKUMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IKUMobile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD62F2901E7A16C200402164 /* Build configuration list for PBXProject "IKUMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD62F2BB1E7A16C300402164 /* Debug */,
+				BD62F2BC1E7A16C300402164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD62F2BD1E7A16C300402164 /* Build configuration list for PBXNativeTarget "IKUMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD62F2BE1E7A16C300402164 /* Debug */,
+				BD62F2BF1E7A16C300402164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD62F2C01E7A16C300402164 /* Build configuration list for PBXNativeTarget "IKUMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD62F2C11E7A16C300402164 /* Debug */,
+				BD62F2C21E7A16C300402164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD62F2C31E7A16C300402164 /* Build configuration list for PBXNativeTarget "IKUMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD62F2C41E7A16C300402164 /* Debug */,
+				BD62F2C51E7A16C300402164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD62F28D1E7A16C200402164 /* Project object */;
+}
