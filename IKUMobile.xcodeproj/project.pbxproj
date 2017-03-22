@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0EEBD51E82E8A200B10D94 /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EEBD41E82E8A200B10D94 /* Courses.swift */; };
 		BD62F2991E7A16C200402164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F2981E7A16C200402164 /* AppDelegate.swift */; };
 		BD62F29B1E7A16C200402164 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F29A1E7A16C200402164 /* ViewController.swift */; };
 		BD62F29E1E7A16C200402164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD62F29C1E7A16C200402164 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD0EEBD41E82E8A200B10D94 /* Courses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Courses.swift; path = ../Courses.swift; sourceTree = "<group>"; };
 		BD62F2951E7A16C200402164 /* IKUMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKUMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD62F2981E7A16C200402164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD62F29A1E7A16C200402164 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		BD62F2971E7A16C200402164 /* IKUMobile */ = {
 			isa = PBXGroup;
 			children = (
+				BD0EEBD41E82E8A200B10D94 /* Courses.swift */,
 				BD62F2981E7A16C200402164 /* AppDelegate.swift */,
 				BD62F29A1E7A16C200402164 /* ViewController.swift */,
 				BD62F29C1E7A16C200402164 /* Main.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				BD62F29B1E7A16C200402164 /* ViewController.swift in Sources */,
 				BD62F2991E7A16C200402164 /* AppDelegate.swift in Sources */,
+				BD0EEBD51E82E8A200B10D94 /* Courses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +507,7 @@
 				BD62F2BF1E7A16C300402164 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD62F2C01E7A16C300402164 /* Build configuration list for PBXNativeTarget "IKUMobileTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				BD62F2C21E7A16C300402164 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD62F2C31E7A16C300402164 /* Build configuration list for PBXNativeTarget "IKUMobileUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				BD62F2C51E7A16C300402164 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

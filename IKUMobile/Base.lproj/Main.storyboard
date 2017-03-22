@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,6 +32,9 @@
                                 <state key="normal" title="Courses ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="D5n-Xz-fKX" kind="show" id="eg6-uf-sd9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJC-tI-U79">
                                 <rect key="frame" x="105" y="220" width="164" height="45"/>
@@ -84,6 +87,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+        <!--Courses-->
+        <scene sceneID="bbE-6B-QyL">
+            <objects>
+                <viewController id="D5n-Xz-fKX" customClass="Courses" customModule="IKUMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BIY-hg-2VC"/>
+                        <viewControllerLayoutGuide type="bottom" id="qdm-54-Lya"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tek-8E-fHF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RTK-t3-sU6">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="D5n-Xz-fKX" id="DGM-Ul-FGH"/>
+                                    <outlet property="delegate" destination="D5n-Xz-fKX" id="vjf-DP-xN0"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G71-XR-Ea7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Courses" id="BpG-2A-gne">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="K91-Ti-sud"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G71-XR-Ea7" firstAttribute="trailing" secondItem="RTK-t3-sU6" secondAttribute="trailing" id="3ut-Xa-lGc"/>
+                            <constraint firstItem="RTK-t3-sU6" firstAttribute="leading" secondItem="tek-8E-fHF" secondAttribute="leading" id="5ka-vT-Ity"/>
+                            <constraint firstItem="qdm-54-Lya" firstAttribute="top" secondItem="RTK-t3-sU6" secondAttribute="bottom" id="F4t-VN-eWV"/>
+                            <constraint firstItem="G71-XR-Ea7" firstAttribute="leading" secondItem="RTK-t3-sU6" secondAttribute="leading" id="VYI-Aq-wfU"/>
+                            <constraint firstItem="G71-XR-Ea7" firstAttribute="top" secondItem="tek-8E-fHF" secondAttribute="top" id="eHy-av-aD3"/>
+                            <constraint firstItem="RTK-t3-sU6" firstAttribute="top" secondItem="G71-XR-Ea7" secondAttribute="bottom" id="f9y-VD-OUa"/>
+                            <constraint firstAttribute="trailing" secondItem="RTK-t3-sU6" secondAttribute="trailing" id="psc-Ft-Sn2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CoursesTable" destination="RTK-t3-sU6" id="IAe-D7-bjw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTK-vL-Z9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
