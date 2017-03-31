@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD0EEBD51E82E8A200B10D94 /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EEBD41E82E8A200B10D94 /* Courses.swift */; };
+		BD0C88FB1E8C883A002223E8 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C88FA1E8C883A002223E8 /* DatabaseController.swift */; };
 		BD62F2991E7A16C200402164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F2981E7A16C200402164 /* AppDelegate.swift */; };
 		BD62F29B1E7A16C200402164 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F29A1E7A16C200402164 /* ViewController.swift */; };
 		BD62F29E1E7A16C200402164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD62F29C1E7A16C200402164 /* Main.storyboard */; };
@@ -15,6 +15,11 @@
 		BD62F2A31E7A16C200402164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD62F2A11E7A16C200402164 /* LaunchScreen.storyboard */; };
 		BD62F2AE1E7A16C300402164 /* IKUMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F2AD1E7A16C300402164 /* IKUMobileTests.swift */; };
 		BD62F2B91E7A16C300402164 /* IKUMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62F2B81E7A16C300402164 /* IKUMobileUITests.swift */; };
+		BD9506101E8C5A6200FCF42A /* IKUMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD95060E1E8C5A6200FCF42A /* IKUMobile.xcdatamodeld */; };
+		BD954DE81E8CB49800D7521D /* Courses+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD954DE61E8CB49800D7521D /* Courses+CoreDataClass.swift */; };
+		BD954DE91E8CB49800D7521D /* Courses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD954DE71E8CB49800D7521D /* Courses+CoreDataProperties.swift */; };
+		BDA4FA111E8CC882008EAE5E /* CourseListTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */; };
+		BDA4FA131E8EECD0008EAE5E /* AddCourseVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BD0EEBD41E82E8A200B10D94 /* Courses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Courses.swift; path = ../Courses.swift; sourceTree = "<group>"; };
+		BD0C88FA1E8C883A002223E8 /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		BD62F2951E7A16C200402164 /* IKUMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKUMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD62F2981E7A16C200402164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD62F29A1E7A16C200402164 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		BD62F2B41E7A16C300402164 /* IKUMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKUMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD62F2B81E7A16C300402164 /* IKUMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKUMobileUITests.swift; sourceTree = "<group>"; };
 		BD62F2BA1E7A16C300402164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD95060F1E8C5A6200FCF42A /* IKUMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IKUMobile.xcdatamodel; sourceTree = "<group>"; };
+		BD954DE61E8CB49800D7521D /* Courses+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD954DE71E8CB49800D7521D /* Courses+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListTVController.swift; sourceTree = "<group>"; };
+		BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseVCViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +109,14 @@
 		BD62F2971E7A16C200402164 /* IKUMobile */ = {
 			isa = PBXGroup;
 			children = (
-				BD0EEBD41E82E8A200B10D94 /* Courses.swift */,
+				BD954DE71E8CB49800D7521D /* Courses+CoreDataProperties.swift */,
+				BD954DE61E8CB49800D7521D /* Courses+CoreDataClass.swift */,
 				BD62F2981E7A16C200402164 /* AppDelegate.swift */,
 				BD62F29A1E7A16C200402164 /* ViewController.swift */,
+				BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */,
+				BD0C88FA1E8C883A002223E8 /* DatabaseController.swift */,
+				BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */,
+				BD95060E1E8C5A6200FCF42A /* IKUMobile.xcdatamodeld */,
 				BD62F29C1E7A16C200402164 /* Main.storyboard */,
 				BD62F29F1E7A16C200402164 /* Assets.xcassets */,
 				BD62F2A11E7A16C200402164 /* LaunchScreen.storyboard */,
@@ -262,9 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9506101E8C5A6200FCF42A /* IKUMobile.xcdatamodeld in Sources */,
 				BD62F29B1E7A16C200402164 /* ViewController.swift in Sources */,
+				BD954DE91E8CB49800D7521D /* Courses+CoreDataProperties.swift in Sources */,
+				BD0C88FB1E8C883A002223E8 /* DatabaseController.swift in Sources */,
+				BDA4FA131E8EECD0008EAE5E /* AddCourseVCViewController.swift in Sources */,
+				BDA4FA111E8CC882008EAE5E /* CourseListTVController.swift in Sources */,
+				BD954DE81E8CB49800D7521D /* Courses+CoreDataClass.swift in Sources */,
 				BD62F2991E7A16C200402164 /* AppDelegate.swift in Sources */,
-				BD0EEBD51E82E8A200B10D94 /* Courses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +548,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD95060E1E8C5A6200FCF42A /* IKUMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD95060F1E8C5A6200FCF42A /* IKUMobile.xcdatamodel */,
+			);
+			currentVersion = BD95060F1E8C5A6200FCF42A /* IKUMobile.xcdatamodel */;
+			path = IKUMobile.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BD62F28D1E7A16C200402164 /* Project object */;
 }
