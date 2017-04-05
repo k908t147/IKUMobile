@@ -20,6 +20,7 @@
 		BD954DE91E8CB49800D7521D /* Courses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD954DE71E8CB49800D7521D /* Courses+CoreDataProperties.swift */; };
 		BDA4FA111E8CC882008EAE5E /* CourseListTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */; };
 		BDA4FA131E8EECD0008EAE5E /* AddCourseVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */; };
+		BDA4FA151E905579008EAE5E /* SelectedCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA141E905579008EAE5E /* SelectedCourseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		BD954DE71E8CB49800D7521D /* Courses+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListTVController.swift; sourceTree = "<group>"; };
 		BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseVCViewController.swift; sourceTree = "<group>"; };
+		BDA4FA141E905579008EAE5E /* SelectedCourseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedCourseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				BD954DE61E8CB49800D7521D /* Courses+CoreDataClass.swift */,
 				BD62F2981E7A16C200402164 /* AppDelegate.swift */,
 				BD62F29A1E7A16C200402164 /* ViewController.swift */,
+				BDA4FA141E905579008EAE5E /* SelectedCourseVC.swift */,
 				BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */,
 				BD0C88FA1E8C883A002223E8 /* DatabaseController.swift */,
 				BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */,
@@ -285,6 +288,7 @@
 				BDA4FA111E8CC882008EAE5E /* CourseListTVController.swift in Sources */,
 				BD954DE81E8CB49800D7521D /* Courses+CoreDataClass.swift in Sources */,
 				BD62F2991E7A16C200402164 /* AppDelegate.swift in Sources */,
+				BDA4FA151E905579008EAE5E /* SelectedCourseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

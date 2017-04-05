@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class CourseListTVController: UITableViewController {
-    
+   
     var courses=[Courses]()
     
 
@@ -67,11 +67,26 @@ class CourseListTVController: UITableViewController {
         let course=courses[indexPath.row]
         
         cell.textLabel?.text=course.courseName
+        
 
         return cell
     }
     
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if (segue.identifier == "courseinfo")
+        
+        {
+            if let destination=segue.destination as? SelectedCourseVC {
+                
+            destination.courseTitle = courses[tableView.indexPathForSelectedRow!.row].courseName
+                
+          
+            
+        }
+    }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

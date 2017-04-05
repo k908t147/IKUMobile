@@ -10,7 +10,10 @@ import UIKit
 import CoreData
 
 class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
-
+    let datePickerlecStart=UIDatePicker()
+    let datePickerlecEnd=UIDatePicker()
+    let datePickeroffStart=UIDatePicker()
+    let datePickeroffEnd=UIDatePicker()
     @IBOutlet weak var courseName: UITextField!
     @IBOutlet weak var lecInstructor: UITextField!
     @IBOutlet weak var lecLocation: UITextField!
@@ -23,10 +26,19 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var offStart: UITextField!
     @IBOutlet weak var offEnd: UITextField!
     
+    var lecStartD: NSDate?
+    var lecEndD: NSDate?
+    var offStartD: NSDate?
+    var offEndD: NSDate?
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lecStartDatePicker()
+        lecEndDatePicker()
+       offStartDatePicker()
+        offEndDatePicker()
         
         self.courseName.delegate=self
         self.lecInstructor.delegate=self
@@ -37,11 +49,158 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         self.offDays.delegate=self
         self.offStart.delegate=self
         self.offEnd.delegate=self
+         self.lecStart.delegate=self
         
         
 
         // Do any additional setup after loading the view.
     }
+    
+    func lecStartDatePicker()
+    {
+        datePickerlecStart.datePickerMode = .time
+        let toolbar=UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressedlecStart1))
+        
+        toolbar.setItems([doneButton], animated: false)
+        lecStart.inputAccessoryView=toolbar
+        lecStart.inputView=datePickerlecStart
+    
+
+        
+    }
+    
+    func donePressedlecStart1()
+    {
+        let dateFormatter=DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        lecStart.text = dateFormatter.string(from: datePickerlecStart.date)
+       
+        
+        self.view.endEditing(true)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    func lecEndDatePicker()
+    {
+        datePickerlecEnd.datePickerMode = .time
+        let toolbar=UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressedlecEnd))
+        toolbar.setItems([doneButton], animated: false)
+    
+        
+        lecEnd.inputAccessoryView=toolbar
+        lecEnd.inputView=datePickerlecEnd
+    
+        
+        
+    }
+    
+    func donePressedlecEnd()
+    {
+        let dateFormatter=DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        lecEnd.text = dateFormatter.string(from: datePickerlecEnd.date)
+     
+        
+        self.view.endEditing(true)
+    }
+    
+
+    
+    func offStartDatePicker()
+    {
+        datePickeroffStart.datePickerMode = .time
+        let toolbar=UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressedoffStart))
+        toolbar.setItems([doneButton], animated: false)
+    
+        offStart.inputAccessoryView=toolbar
+        offStart.inputView=datePickeroffStart
+        
+        
+    }
+    
+    func donePressedoffStart()
+    {
+        let dateFormatter=DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        offStart.text = dateFormatter.string(from: datePickeroffStart.date)
+        offStartD=datePickeroffStart.date as NSDate
+
+        
+        self.view.endEditing(true)
+    }
+    
+
+    
+    
+    
+    
+    
+    func offEndDatePicker()
+    {
+        datePickeroffEnd.datePickerMode = .time
+        let toolbar=UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressedoffEnd))
+        toolbar.setItems([doneButton], animated: false)
+    
+        
+        offEnd.inputAccessoryView=toolbar
+        offEnd.inputView=datePickeroffEnd
+        
+        
+    }
+    
+    func donePressedoffEnd()
+    {
+        let dateFormatter=DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        offEnd.text = dateFormatter.string(from: datePickeroffEnd.date)
+       // offEndD=datePickeroffEnd.date as NSDate
+        
+        self.view.endEditing(true)
+    }
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,15 +212,24 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         
         
         let course:Courses=NSEntityDescription.insertNewObject(forEntityName: "Courses", into:DatabaseController.persistentContainer.viewContext) as! Courses
+
         
+        lecStartD = NSDate()
         
         course.courseName=courseName.text
         course.lectureInstructor=lecInstructor.text
         course.lecturLocation=lecLocation.text
         course.officeLocation=offLocation.text
+        //course.lectureEnd = lecEndD
+       // course.lectureStart = lecStartD
+       // course.officeStart=offStartD
+        //course.officeEnd=offEndD
+        
+        
        //Rest of Items to be saved will be added here.
         
         print("im here")
+        
     //Save the new object
         DatabaseController.saveContext()
         
