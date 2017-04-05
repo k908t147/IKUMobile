@@ -211,10 +211,10 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveCourse(_ sender: Any) {
         
         
-        let course:Courses=NSEntityDescription.insertNewObject(forEntityName: "Courses", into:DatabaseController.persistentContainer.viewContext) as! Courses
+       let course:Courses=NSEntityDescription.insertNewObject(forEntityName: "Courses", into:DatabaseController.persistentContainer.viewContext) as! Courses
 
         
-        lecStartD = NSDate()
+    
         
         course.courseName=courseName.text
         course.lectureInstructor=lecInstructor.text
