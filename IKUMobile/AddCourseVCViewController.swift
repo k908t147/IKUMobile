@@ -328,8 +328,8 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    
     @IBAction func LecTuePressed(_ sender: Any) {
-        
         if lecTueButton==0
         {
             (sender as! UIButton).backgroundColor = UIColor.red
@@ -343,8 +343,18 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             lecDays[1]=0
             lecTueButton=0
         }
-        
+
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func LecWedPressed(_ sender: Any) {
         if lecWedButton==0
@@ -508,33 +518,41 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         }
 
         
-       let course:Courses=NSEntityDescription.insertNewObject(forEntityName: "Courses", into:DatabaseController.persistentContainer.viewContext) as! Courses
-
-        
+    }
     
+    
+    
+    @IBAction func LabTuePressed(_ sender: Any) {
         
-        course.courseName=courseName.text
-        course.lectureInstructor=lecInstructor.text
-        course.lecturLocation=lecLocation.text
-        course.officeLocation=offLocation.text
-        //course.lectureEnd = lecEndD
-       // course.lectureStart = lecStartD
-       // course.officeStart=offStartD
-        //course.officeEnd=offEndD
-        
-        
-       //Rest of Items to be saved will be added here.
-        
-        print("im here")
-        
-    //Save the new object
-        DatabaseController.saveContext()
-        
+        if labTueButton==0
+        {
+            (sender as! UIButton).backgroundColor = UIColor.red
+            labDays[1]=1
+            labTueButton=1
+            
+        }
+        else
+        {
+            (sender as! UIButton).backgroundColor = UIColor.white
+            labDays[1]=0
+            labTueButton=0
+        }
+
         
         
     }
     
-  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @IBAction func LabWedPressed(_ sender: Any) {
         if labWedButton==0
         {
