@@ -11,12 +11,16 @@ import UIKit
 class SelectedCourseVC: UIViewController {
 
     @IBOutlet weak var courseName: UILabel!
-    
+    var courses=[Courses]()
     var courseTitle: String!
+    var objectLocation: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.courseName.text=self.courseTitle
+        self.courseName.text=courses[objectLocation].courseName
+    }
+   override func viewDidAppear(_ animated: Bool) {
+        self.courseName.text=courses[objectLocation].courseName
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +28,36 @@ class SelectedCourseVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "toAssignments")
+            
+        {
+            if let destination=segue.destination as? AssignmentListVC {
+                
+                destination.courses = courses
+                destination.objectLocation=objectLocation
+                
+            }
+        }
+        if (segue.identifier == "Update")
+            
+        {
+            if let destination=segue.destination as? UpdateCourse {
+                
+                destination.courses = courses
+                destination.objectLocation=objectLocation
+                
+            }
+        }
+
+    }
+
 
     /*
     // MARK: - Navigation

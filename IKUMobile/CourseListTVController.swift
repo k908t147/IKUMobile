@@ -21,17 +21,28 @@ class CourseListTVController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         
-        
-        
+       // deleteRecords()
         let request:NSFetchRequest<Courses>=Courses.fetchRequest()
         do
         {
-        courses=try DatabaseController.persistentContainer.viewContext.fetch(request) 
+            courses=try DatabaseController.persistentContainer.viewContext.fetch(request)
+            
+        }
+        catch
+        {
+            print("There are errors")
+        }
+        self.tableView.reloadData()
+
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let request:NSFetchRequest<Courses>=Courses.fetchRequest()
+        do
+        {
+            courses=try DatabaseController.persistentContainer.viewContext.fetch(request)
             
         }
         catch
@@ -40,7 +51,8 @@ class CourseListTVController: UITableViewController {
         }
         self.tableView.reloadData()
         
-    }
+        
+          }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -56,7 +68,9 @@ class CourseListTVController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+       
         return courses.count
+        
     }
 
     
@@ -64,14 +78,27 @@ class CourseListTVController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
+        
         let course=courses[indexPath.row]
-        
         cell.textLabel?.text=course.courseName
-        
-
         return cell
     }
     
+    
+    
+    //Deleting Items from tableView and Core Data
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle==UITableViewCellEditingStyle.delete
+        {
+     
+        let course = courses[indexPath.row] as NSManagedObject
+        DatabaseController.persistentContainer.viewContext.delete(course)
+        DatabaseController.saveContext()
+            courses.remove(at: indexPath.row)
+        tableView.reloadData()
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
@@ -81,11 +108,33 @@ class CourseListTVController: UITableViewController {
             if let destination=segue.destination as? SelectedCourseVC {
                 
             destination.courseTitle = courses[tableView.indexPathForSelectedRow!.row].courseName
-                
+            destination.objectLocation=tableView.indexPathForSelectedRow!.row
+            destination.courses=courses
           
             
         }
     }
+    }
+    
+    
+    func deleteRecords()
+    {
+        
+            let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Courses")
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+            
+            do {
+                try DatabaseController.persistentContainer.viewContext.execute(deleteRequest)
+                 DatabaseController.saveContext()
+            } catch {
+                print ("There was an error")
+            }
+        
+
+    
+
+
+
     }
     /*
     // Override to support conditional editing of the table view.
