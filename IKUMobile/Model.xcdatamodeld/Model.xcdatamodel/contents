@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Courses" representedClassName="Courses" syncable="YES">
+        <attribute name="courseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labDays" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="labEnd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labInstructor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labStart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lecDays" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="lecEnd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lecInstructor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lecLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lecStart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offDays" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="offEnd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offInstructor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offStart" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Courses" positionX="18" positionY="54" width="128" height="285"/>
+    </elements>
+</model>

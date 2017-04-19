@@ -2,7 +2,7 @@
 //  Courses+CoreDataClass.swift
 //  IKUMobile
 //
-//  Created by Keshawn Triplett on 3/29/17.
+//  Created by Keshawn Triplett on 4/18/17.
 //  Copyright © 2017 Keshawn Triplett. All rights reserved.
 //
 

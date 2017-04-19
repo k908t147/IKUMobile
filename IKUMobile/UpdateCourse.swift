@@ -9,7 +9,11 @@
 import UIKit
 import CoreData
 
-class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
+class UpdateCourse: UIViewController, UITextFieldDelegate {
+    
+    var courses=[Courses]()
+    var objectLocation: Int!
+    
     //Time Date Pickers
     let datePickerlecStart=UIDatePicker()
     let datePickerlecEnd=UIDatePicker()
@@ -18,7 +22,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
     let datePickerlabStart=UIDatePicker()
     let datePickerlabEnd=UIDatePicker()
     
-    //Text Feild Outlets 
+    //Text Feild Outlets
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var labInstructor: UITextField!
     @IBOutlet weak var labEnd: UITextField!
@@ -62,9 +66,12 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func addNewCourse(_ sender: Any) {
-       
         
-        let course:Courses=NSEntityDescription.insertNewObject(forEntityName: "Courses", into:DatabaseController.persistentContainer.viewContext) as! Courses
+        
+        let labDaysData = NSKeyedArchiver.archivedData(withRootObject: labDays)
+        let lecDaysData = NSKeyedArchiver.archivedData(withRootObject: lecDays)
+        let offDaysData = NSKeyedArchiver.archivedData(withRootObject: offDays)
+        let course1 = courses[objectLocation] as NSManagedObject
         
         if courseName.text == ""
         {
@@ -73,31 +80,36 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-        let labDaysData = NSKeyedArchiver.archivedData(withRootObject: labDays)
-        let lecDaysData = NSKeyedArchiver.archivedData(withRootObject: lecDays)
-        let offDaysData = NSKeyedArchiver.archivedData(withRootObject: offDays)
-        course.offDays=offDaysData as NSData
-        course.lecDays=lecDaysData as NSData
-        course.labDays=labDaysData as NSData
-        course.courseName=courseName.text
-        course.lecInstructor=lecInstructor.text
-        course.lecLocation=lecLocation.text
-        course.offLocation=offLocation.text
-        course.labInstructor=labInstructor.text
-        course.labLocation=labLocation.text
-        course.labStart=labStart.text
-        course.labEnd=labEnd.text
-        course.lecEnd = lecEnd.text
-        course.lecStart=lecStart.text
-        course.offStart=offStart.text
-        course.offEnd=offEnd.text
-        
-        
-        //Save the new object
-        DatabaseController.saveContext()
-        navigationController?.popViewController(animated: true)    
+            course1.setValue(courseName.text, forKey: "courseName")
+            course1.setValue(labInstructor.text, forKey: "labInstructor")
+            course1.setValue(labStart.text, forKey: "labStart")
+            course1.setValue(labEnd.text, forKey: "labEnd")
+            course1.setValue(labLocation.text, forKey: "labLocation")
+            course1.setValue(lecStart.text, forKey: "lecStart")
+            course1.setValue(lecEnd.text, forKey: "lecEnd")
+            course1.setValue(lecInstructor.text, forKey: "lecInstructor")
+            course1.setValue(lecLocation.text, forKey: "lecLocation")
+            course1.setValue(offLocation.text, forKey: "offLocation")
+            course1.setValue(offStart.text, forKey: "offStart")
+            course1.setValue(offEnd.text, forKey: "offEnd")
+            course1.setValue(courseName.text, forKey: "courseName")
+            
+            course1.setValue(labDaysData as NSData, forKey: "labDays")
+            course1.setValue(lecDaysData as NSData, forKey: "lecDays")
+            course1.setValue(offDaysData as NSData, forKey: "offDays")
+            
+            DatabaseController.saveContext()
+
+      navigationController?.popViewController(animated: true)
+            
         }
     }
+
+    
+
+    
+        
+    
     
     func createAlert(title:String, message:String)
     {
@@ -109,13 +121,13 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true, completion: nil)
         
     }
-
     
-   
-   
-        
-
-
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,12 +138,64 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         labStartDatePicker()
         labEndDatePicker()
         
-    
-       let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
-       recognizer.numberOfTapsRequired = 1
-       recognizer.numberOfTouchesRequired = 1
-        scrollView.addGestureRecognizer(recognizer)
+        labInstructor.text=courses[objectLocation].labInstructor
+        courseName.text=courses[objectLocation].courseName
+       labEnd.text=courses[objectLocation].labEnd
+        labStart.text=courses[objectLocation].labStart
+         labLocation.text=courses[objectLocation].labLocation
+         offEnd.text=courses[objectLocation].offEnd
+         offStart.text=courses[objectLocation].offStart
+         offLocation.text=courses[objectLocation].offLocation
+        lecEnd.text=courses[objectLocation].lecEnd
+         lecStart.text=courses[objectLocation].lecStart
+         lecInstructor.text=courses[objectLocation].lecInstructor
+         lecLocation.text=courses[objectLocation].lecLocation
+        
+        
+        /*
+        
+        let unarchiveObject = NSKeyedUnarchiver.unarchiveObject(with: courses[objectLocation].lecDays! as Data)
+        lecDays = unarchiveObject as AnyObject! as! Array<Int>
+        
+        let unarchiveObject1 = NSKeyedUnarchiver.unarchiveObject(with: courses[objectLocation].labDays! as Data)
+        labDays = unarchiveObject1 as AnyObject! as! Array<Int>
+        
+        let unarchiveObject2 = NSKeyedUnarchiver.unarchiveObject(with: courses[objectLocation].offDays! as Data)
+        offDays = unarchiveObject2 as AnyObject! as! Array<Int>
+        
+        
+        
+       lecMonButton=lecDays[0]
+        lecTueButton=lecDays[1]
+       lecWedButton=lecDays[2]
+        lecThurButton=lecDays[3]
+        lecFriButton=lecDays[4]
 
+        
+        //Office Days Button
+        
+         offMonButton=offDays[0]
+        offTueButton=lecDays[1]
+       offWedButton=lecDays[2]
+         offThurButton=lecDays[3]
+         offFriButton=lecDays[4]
+     
+        
+        //Lab Days Button
+        
+         labMonButton=labDays[0]
+         labTueButton=lecDays[1]
+         labWedButton=lecDays[2]
+         labThurButton=lecDays[3]
+        labFriButton=lecDays[4]
+       */
+
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
+        recognizer.numberOfTapsRequired = 1
+        recognizer.numberOfTouchesRequired = 1
+        scrollView.addGestureRecognizer(recognizer)
+        
         //Do any additional setup after loading the view.
     }
     
@@ -162,7 +226,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .short
         lecStart.text = dateFormatter.string(from: datePickerlecStart.date)
-
+        
         self.view.endEditing(true)
     }
     
@@ -176,7 +240,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         
         let doneButton=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressedlecEnd))
         toolbar.setItems([doneButton], animated: false)
-    
+        
         
         lecEnd.inputAccessoryView=toolbar
         lecEnd.inputView=datePickerlecEnd
@@ -191,7 +255,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-
+    
     
     func offStartDatePicker()
     {
@@ -214,7 +278,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-
+    
     
     
     func offEndDatePicker()
@@ -225,7 +289,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         
         let doneButton=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressedoffEnd))
         toolbar.setItems([doneButton], animated: false)
-    
+        
         
         offEnd.inputAccessoryView=toolbar
         offEnd.inputView=datePickeroffEnd
@@ -239,15 +303,15 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .short
         offEnd.text = dateFormatter.string(from: datePickeroffEnd.date)
-      
+        
         self.view.endEditing(true)
     }
     
-
     
     
-
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -306,9 +370,9 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-
-// Mark:- Day Button Actions
-//Lecture Days Buttons
+    
+    // Mark:- Day Button Actions
+    //Lecture Days Buttons
     @IBAction func LecMonPressed(_ sender: Any)
     {
         if lecMonButton==0
@@ -360,7 +424,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             lecDays[2]=0
             lecWedButton=0
         }
-
+        
     }
     
     @IBAction func LecThursPressed(_ sender: Any) {
@@ -377,9 +441,9 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             lecDays[3]=0
             lecThurButton=0
         }
-
+        
     }
-
+    
     @IBAction func LecFriPressed(_ sender: Any) {
         if lecFriButton==0
         {
@@ -394,12 +458,12 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             lecDays[4]=0
             lecFriButton=0
         }
-
+        
     }
     
     //Office Days Buttons
     
-
+    
     @IBAction func OffMonPressed(_ sender: Any) {
         if offMonButton==0
         {
@@ -414,9 +478,9 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             offDays[0]=0
             offMonButton=0
         }
-
+        
     }
-  
+    
     
     @IBAction func OffTuePressed(_ sender: Any) {
         if offTueButton==0
@@ -432,7 +496,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             offDays[1]=0
             offTueButton=0
         }
-
+        
     }
     
     
@@ -451,7 +515,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             offDays[2]=0
             offWedButton=0
         }
-
+        
     }
     
     
@@ -469,7 +533,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             offDays[3]=0
             offThurButton=0
         }
-
+        
     }
     
     
@@ -487,7 +551,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             offDays[4]=0
             offFriButton=0
         }
-
+        
     }
     
     //Lab Days Buttons
@@ -506,7 +570,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             labDays[0]=0
             labMonButton=0
         }
-
+        
         
     }
     
@@ -524,10 +588,10 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             labDays[1]=0
             labTueButton=0
         }
-
+        
     }
     
-  
+    
     @IBAction func LabWedPressed(_ sender: Any) {
         if labWedButton==0
         {
@@ -542,7 +606,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             labDays[2]=0
             labWedButton=0
         }
-
+        
     }
     
     @IBAction func LabThurPressed(_ sender: Any) {
@@ -559,7 +623,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             labDays[3]=0
             labThurButton=0
         }
-
+        
     }
     
     
@@ -573,12 +637,12 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-            (sender as! UIButton).backgroundColor = UIColor.white
+            (sender as! UIButton).backgroundColor = UIColor.red
             labDays[4]=0
             labFriButton=0
         }
         
-
+        
     }
     
     
@@ -587,13 +651,13 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
