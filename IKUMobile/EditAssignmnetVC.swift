@@ -1,20 +1,23 @@
 //
-//  AddAssignmentVC.swift
+//  EditAssignmnetVC.swift
 //  IKUMobile
 //
-//  Created by Keshawn Triplett on 4/17/17.
+//  Created by Keshawn Triplett on 4/22/17.
 //  Copyright © 2017 Keshawn Triplett. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class AddAssignmentVC: UIViewController, UITextFieldDelegate {
+class EditAssignmentVC: UIViewController, UITextFieldDelegate {
     let datePickerDueDate=UIDatePicker()
     let datePickerDueTime=UIDatePicker()
     var courses=[Courses]()
     var objectLocation: Int!
     var notCourseSpecific=0;
+    var assignmentLocation: Int!
+    var assignments=[Assignment]()
+
     
     
     @IBOutlet weak var assignmentDueTime: UITextField!
@@ -23,12 +26,10 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var assignmentDue: UITextField!
     
-
+    
     @IBAction func SaveAssignment(_ sender: Any) {
         
-        let assignment:Assignment=NSEntityDescription.insertNewObject(forEntityName: "Assignment", into:DatabaseController.persistentContainer.viewContext) as! Assignment
-    
-        
+        let assignment1 = assignments[assignmentLocation] as NSManagedObject
         
         if assignmentTitle.text == ""
         {
@@ -37,30 +38,16 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
         }
         else
         {
-        if(notCourseSpecific==0)
-            {
-            assignment.title=assignmentTitle.text
-            assignment.dueDate=assignmentDue.text
-            assignment.dueTime=assignmentDueTime.text
-            assignment.courseName=courses[objectLocation].courseName
-            //course.mutableSetValue(forKey: "assignments").add(assignment)
+            assignment1.setValue(assignmentTitle.text, forKey: "title")
+            assignment1.setValue(assignmentDue.text, forKey: "dueDate")
+            assignment1.setValue(assignmentDueTime.text, forKey: "dueTime")
             DatabaseController.saveContext()
+            
             navigationController?.popViewController(animated: true)
-            }
-            else
-                {
-                    assignment.title=assignmentTitle.text
-                    assignment.dueDate=assignmentDue.text
-                    assignment.dueTime=assignmentDueTime.text
-                    assignment.courseName="none"
-            //course.mutableSetValue(forKey: "assignments").add(assignment)
-                    DatabaseController.saveContext()
-                    navigationController?.popViewController(animated: true)
-                }
-            }
+
+          }
+    
     }
-    
-    
     func createAlert(title:String, message:String)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -72,37 +59,42 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
         
     }
     
-
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.assignmentTitle.delegate=self
         self.assignmentDue.delegate=self
         self.assignmentDueTime.delegate=self
         dueDateDatePicker()
         dueTimeDatePicker()
         
-      
+        assignmentTitle.text=assignments[assignmentLocation].title
+        assignmentDue.text=assignments[assignmentLocation].dueDate
+        assignmentDueTime.text=assignments[assignmentLocation].dueTime
+    
+        
+        
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-   // func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //assignmentTitle.resignFirstResponder()
-        //assignmentDue.resignFirstResponder()
-       // assignmentDueTime.resignFirstResponder()
-      //  return(true)
-   // }
+    // func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    //assignmentTitle.resignFirstResponder()
+    //assignmentDue.resignFirstResponder()
+    // assignmentDueTime.resignFirstResponder()
+    //  return(true)
+    // }
     func dueDateDatePicker()
     {
         datePickerDueDate.datePickerMode = .date
@@ -127,7 +119,7 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
         
         self.view.endEditing(true)
     }
-
+    
     func dueTimeDatePicker()
     {
         datePickerDueTime.datePickerMode = .time
@@ -152,16 +144,17 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
         
         self.view.endEditing(true)
     }
-
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+

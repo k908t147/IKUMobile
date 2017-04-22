@@ -13,6 +13,9 @@ class SelectedAssignmentVC: UIViewController {
     var name: String!
     var dueDate: String?
     var dueTime: String?
+    var assignmentLocation: Int!
+    var assignments=[Assignment]()
+
     
     
     
@@ -24,7 +27,13 @@ class SelectedAssignmentVC: UIViewController {
     
     
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        assignmentName.text=assignments[assignmentLocation].title
+        assignmentDueDate.text=assignments[assignmentLocation].dueDate
+        assignmentDueTime.text=assignments[assignmentLocation].dueTime
+        
+
+    }
     
     
     
@@ -43,6 +52,21 @@ class SelectedAssignmentVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "toEditAssignment")
+            
+        {
+            if let destination=segue.destination as? EditAssignmentVC {
+                
+                destination.assignments = assignments
+                destination.assignmentLocation=assignmentLocation
+                
+            }
+        }
+    }
+    
+    
     
 
     /*

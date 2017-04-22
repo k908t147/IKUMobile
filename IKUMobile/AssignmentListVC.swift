@@ -13,16 +13,24 @@ class AssignmentListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     var assignments=[Assignment]()
     var courses=[Courses]()
     var objectLocation: Int!
+    var menuOpen=0
+    
+    
+    
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
 
     @IBOutlet weak var tableview: UITableView!
     
+    @IBOutlet weak var menuView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-               
-        print(courses[objectLocation].courseName!)
-
+        leadingConstraint.constant = -160
+    
         tableview.delegate=self
         tableview.dataSource=self
+        
+        menuView.layer.shadowOpacity=1
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,10 +52,29 @@ class AssignmentListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
 
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func openMenu(_ sender: Any) {
+        
+        if(menuOpen==0)
+        {
+            leadingConstraint.constant=0
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+            menuOpen=1
+
+        }
+       else
+        {
+            leadingConstraint.constant = -160
+            menuOpen=0
+        }
+        
     }
+    
+    
+
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return assignments.count
     }
@@ -68,6 +95,20 @@ class AssignmentListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         return cell
 
     }
+    
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle==UITableViewCellEditingStyle.delete
+        {
+            
+            let assignment = assignments[indexPath.row] as NSManagedObject
+            DatabaseController.persistentContainer.viewContext.delete(assignment)
+            DatabaseController.saveContext()
+            assignments.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
+
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,20 +131,14 @@ class AssignmentListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
                 destination.name = assignments[tableview.indexPathForSelectedRow!.row].title
                 destination.dueDate=assignments[tableview.indexPathForSelectedRow!.row].dueDate
                 destination.dueTime=assignments[tableview.indexPathForSelectedRow!.row].dueTime
+                destination.assignmentLocation=tableview.indexPathForSelectedRow!.row
+                destination.assignments=assignments
                 
             }
         }
         
         
-           }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

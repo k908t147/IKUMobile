@@ -28,6 +28,8 @@
 		BDA4FA111E8CC882008EAE5E /* CourseListTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */; };
 		BDA4FA131E8EECD0008EAE5E /* AddCourseVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */; };
 		BDA4FA151E905579008EAE5E /* SelectedCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA141E905579008EAE5E /* SelectedCourseVC.swift */; };
+		BDDF34C81EA947FA00887886 /* AllAssignmentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF34C71EA947FA00887886 /* AllAssignmentListVC.swift */; };
+		BDDF34CA1EABC85C00887886 /* EditAssignmnetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF34C91EABC85C00887886 /* EditAssignmnetVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListTVController.swift; sourceTree = "<group>"; };
 		BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseVCViewController.swift; sourceTree = "<group>"; };
 		BDA4FA141E905579008EAE5E /* SelectedCourseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedCourseVC.swift; sourceTree = "<group>"; };
+		BDDF34C71EA947FA00887886 /* AllAssignmentListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllAssignmentListVC.swift; sourceTree = "<group>"; };
+		BDDF34C91EABC85C00887886 /* EditAssignmnetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAssignmnetVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +151,11 @@
 				BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */,
 				BD636D9C1EA684AD00E9022B /* IKUMobile.xcdatamodeld */,
 				BD62F29C1E7A16C200402164 /* Main.storyboard */,
+				BDDF34C71EA947FA00887886 /* AllAssignmentListVC.swift */,
 				BD636DB41EA7A18F00E9022B /* SelectedAssignmentVC.swift */,
 				BD0BC41F1EA574AE005F4B00 /* AssignmentListVC.swift */,
 				BD0BC4211EA574D2005F4B00 /* AddAssignmentVC.swift */,
+				BDDF34C91EABC85C00887886 /* EditAssignmnetVC.swift */,
 				BD62F29F1E7A16C200402164 /* Assets.xcassets */,
 				BD62F2A11E7A16C200402164 /* LaunchScreen.storyboard */,
 				BD62F2A41E7A16C200402164 /* Info.plist */,
@@ -310,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD636DB51EA7A18F00E9022B /* SelectedAssignmentVC.swift in Sources */,
+				BDDF34C81EA947FA00887886 /* AllAssignmentListVC.swift in Sources */,
 				BD62F29B1E7A16C200402164 /* ViewController.swift in Sources */,
 				BD0C88FB1E8C883A002223E8 /* DatabaseController.swift in Sources */,
 				BD636DAF1EA68F4E00E9022B /* Assignment+CoreDataProperties.swift in Sources */,
@@ -321,6 +328,7 @@
 				BD0BC40D1E9F0449005F4B00 /* WebVC.swift in Sources */,
 				BD636DB31EA6BC4600E9022B /* UpdateCourse.swift in Sources */,
 				BD636D9E1EA684AD00E9022B /* IKUMobile.xcdatamodeld in Sources */,
+				BDDF34CA1EABC85C00887886 /* EditAssignmnetVC.swift in Sources */,
 				BD636DB11EA68F4E00E9022B /* Courses+CoreDataProperties.swift in Sources */,
 				BDA4FA151E905579008EAE5E /* SelectedCourseVC.swift in Sources */,
 				BD636DAE1EA68F4E00E9022B /* Assignment+CoreDataClass.swift in Sources */,
