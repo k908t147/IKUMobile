@@ -17,12 +17,9 @@ class CourseListTVController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        
+   
        // deleteRecords()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         let request:NSFetchRequest<Courses>=Courses.fetchRequest()
         do
         {
@@ -39,6 +36,7 @@ class CourseListTVController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         let request:NSFetchRequest<Courses>=Courses.fetchRequest()
         do
         {
@@ -72,6 +70,7 @@ class CourseListTVController: UITableViewController {
         return courses.count
         
     }
+  
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

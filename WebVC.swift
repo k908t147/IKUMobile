@@ -13,6 +13,7 @@ class WebVC: UIViewController {
     @IBOutlet weak var myWeb: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         
         let url = URL(string: "https://calendar.ku.edu")

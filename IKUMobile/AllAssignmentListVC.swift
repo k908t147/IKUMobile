@@ -16,11 +16,8 @@ class AllAssignmnetListVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+   
         
         // deleteRecords()
         let request:NSFetchRequest<Assignment>=Assignment.fetchRequest()
@@ -39,6 +36,7 @@ class AllAssignmnetListVC: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         let request:NSFetchRequest<Assignment>=Assignment.fetchRequest()
         do
         {

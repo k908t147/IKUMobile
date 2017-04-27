@@ -28,6 +28,7 @@ class SelectedAssignmentVC: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         assignmentName.text=assignments[assignmentLocation].title
         assignmentDueDate.text=assignments[assignmentLocation].dueDate
         assignmentDueTime.text=assignments[assignmentLocation].dueTime
@@ -39,6 +40,7 @@ class SelectedAssignmentVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         assignmentName.text=name
         assignmentDueDate.text=dueDate
         assignmentDueTime.text=dueTime

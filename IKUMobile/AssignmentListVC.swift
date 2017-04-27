@@ -16,6 +16,7 @@ class AssignmentListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     var menuOpen=0
     
     
+    @IBOutlet weak var navBar: UINavigationItem!
     
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
 
@@ -25,6 +26,8 @@ class AssignmentListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        navBar.title=courses[objectLocation].courseName!+" Assignments"
         leadingConstraint.constant = -160
     
         tableview.delegate=self
@@ -34,6 +37,9 @@ class AssignmentListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        navBar.title=courses[objectLocation].courseName!+" Assignments"
+        leadingConstraint.constant = -160
         let request:NSFetchRequest<Assignment>=Assignment.fetchRequest()
         let coursename=courses[objectLocation].courseName
         request.predicate = NSPredicate(format: "courseName == %@", coursename!)
@@ -91,6 +97,7 @@ class AssignmentListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         let assignment=assignments[indexPath.row]
     
         cell.textLabel?.text=assignment.title
+        cell.detailTextLabel?.textColor=UIColor.red
         cell.detailTextLabel?.text=assignment.dueDate
         return cell
 

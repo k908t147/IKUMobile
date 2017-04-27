@@ -124,7 +124,9 @@ class UpdateCourse: UIViewController, UITextFieldDelegate {
     
     
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     
     
     

@@ -249,6 +249,7 @@
 				TargetAttributes = {
 					BD62F2941E7A16C200402164 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BD55S9JLUF;
 						ProvisioningStyle = Automatic;
 					};
 					BD62F2A81E7A16C300402164 = {
@@ -482,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BD55S9JLUF;
 				INFOPLIST_FILE = IKUMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IKU.IKUMobile;
@@ -494,6 +496,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BD55S9JLUF;
 				INFOPLIST_FILE = IKUMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IKU.IKUMobile;

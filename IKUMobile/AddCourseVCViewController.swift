@@ -91,6 +91,38 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
         course.lecStart=lecStart.text
         course.offStart=offStart.text
         course.offEnd=offEnd.text
+            
+        //Calendar Packaging
+            var lecDaysString=""
+            var labDaysString=""
+            var offDaysString=""
+            for i in lecDays
+           {
+            lecDaysString=lecDaysString+"\(i)"
+            }
+        
+            for i in labDays
+            {
+                labDaysString=labDaysString+"\(i)"
+            }
+            for i in offDays
+            {
+                offDaysString=offDaysString+"\(i)"
+            }
+
+            
+        var lecture="Lecture,"
+        lecture=lecture+courseName.text!+","+lecDaysString+","+lecStart.text!+","+lecEnd.text!
+        print(lecture)
+        
+        var lab="Lab,"
+        lab=lab+courseName.text!+","+labDaysString+","+labStart.text!+","+labEnd.text!
+        print(lab)
+        
+        var office="Office,"
+        office=office+courseName.text!+","+offDaysString+","+offStart.text!+","+offEnd.text!
+        print(office)
+            
         
         
         //Save the new object
@@ -119,6 +151,7 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         lecStartDatePicker()
         lecEndDatePicker()
         offStartDatePicker()

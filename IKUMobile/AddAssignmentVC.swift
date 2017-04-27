@@ -78,6 +78,7 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
 
         self.assignmentTitle.delegate=self
         self.assignmentDue.delegate=self
