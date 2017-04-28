@@ -15,6 +15,8 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
     var courses=[Courses]()
     var objectLocation: Int!
     var notCourseSpecific=0;
+    var day=""
+    var month=""
     
     
     @IBOutlet weak var assignmentDueTime: UITextField!
@@ -31,7 +33,7 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
         
         
         if assignmentTitle.text == ""
-        {
+         {
             createAlert(title: "Incomplete", message: "Missing Assignment Title")
             
         }
@@ -45,6 +47,16 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
             assignment.courseName=courses[objectLocation].courseName
             //course.mutableSetValue(forKey: "assignments").add(assignment)
             DatabaseController.saveContext()
+                
+                
+                
+                
+                
+            //Luis Take "Assignment as paramater to function for calendar
+                
+            let Assignment="Assignment,"+assignmentTitle.text!+","+month+","+day
+            print(Assignment)
+                
             navigationController?.popViewController(animated: true)
             }
             else
@@ -53,9 +65,22 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
                     assignment.dueDate=assignmentDue.text
                     assignment.dueTime=assignmentDueTime.text
                     assignment.courseName="none"
-            //course.mutableSetValue(forKey: "assignments").add(assignment)
+                    //course.mutableSetValue(forKey: "assignments").add(assignment)
                     DatabaseController.saveContext()
+                    
+                    
+                    
+                    //Luis, take "Assignment" as the paramater to the function for the calendar
+                    
+                    let Assignment="Assignment,"+assignmentTitle.text!+","+month+","+day
+                    print(Assignment)
+
                     navigationController?.popViewController(animated: true)
+                    
+                    
+                    
+                    
+                    
                 }
             }
     }
@@ -124,6 +149,16 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
         let dateFormatter=DateFormatter()
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .none
+        
+        let dateFormatterDay=DateFormatter()
+        dateFormatterDay.dateFormat="dd"
+        day=dateFormatterDay.string(from: datePickerDueDate.date)
+        
+        let dateFormatterMonth=DateFormatter()
+        dateFormatterMonth.dateFormat="MM"
+        month=dateFormatterMonth.string(from: datePickerDueDate.date)
+
+        
         assignmentDue.text = dateFormatter.string(from: datePickerDueDate.date)
         
         self.view.endEditing(true)

@@ -111,6 +111,13 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             }
 
             
+            
+            
+            
+            
+            
+         //Luis take Lab, Lecture, and office as parameeters to function for calendar
+            
         var lecture="Lecture,"
         lecture=lecture+courseName.text!+","+lecDaysString+","+lecStart.text!+","+lecEnd.text!
         print(lecture)
