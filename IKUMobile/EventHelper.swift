@@ -284,4 +284,34 @@ class EventHelper
         
         
     }
+    
+    //////
+    func addAssignmentEvents(Name: String, Month: String,Day: String, Time: String)
+    {
+       print(Name+" "+Month+" "+Day+" "+Time)
+        let event:EKEvent = EKEvent(eventStore: appleEventStore)
+        event.title = Name
+        let ThStartHour24H = amAppend(str: Time)
+        //let ThEndHour24H = amAppend(str: EndHour)
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        
+        let ThStartDateF = dateformatter.date(from: "2017-"+Month+"-"+Day+"T"+ThStartHour24H)///
+        event.startDate =  ThStartDateF! as Date
+      
+        event.endDate =  ThStartDateF! as Date
+        event.notes = "KU Calendar"
+        event.calendar = appleEventStore.defaultCalendarForNewEvents
+        do {
+            try appleEventStore.save(event, span: .thisEvent)
+            //print("events added with dates:")
+        } catch let e as NSError {
+            //    print(e.description)
+            return
+        }
+        
+    }
+    ///////
+    
+    
 }
