@@ -15,7 +15,11 @@ class CalendarView: UIViewController {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
        EventHelper().requestAccessToCalendar()//requests access to calendar
-       EventHelper().addAppleEvents()
+       //EventHelper().addAppleEvents()
+        
+        UIApplication.shared.openURL(NSURL(string: "calshow://")! as URL)
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,5 +37,9 @@ class CalendarView: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+   
+    
+    
+    
     
 }

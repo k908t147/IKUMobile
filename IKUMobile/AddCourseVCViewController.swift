@@ -117,10 +117,25 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             
             
          //Luis take Lab, Lecture, and office as parameeters to function for calendar
+            var Name = courseName.text!+" - Lecture"
+            var Type = "0"
+            EventHelper().addAppleEvents(Type: Type, Name: Name, Sequence: lecDaysString, Location: lecLocation.text!, StartHour: lecStart.text!, EndHour: lecEnd.text!)//Lecture
+            Name = courseName.text!+" - Laboratory"
+            EventHelper().addAppleEvents(Type: Type, Name: Name, Sequence: labDaysString, Location: lecLocation.text!, StartHour: lecStart.text!, EndHour: lecEnd.text!)//Laboratory
+            Name = courseName.text!+" - Office"
+            EventHelper().addAppleEvents(Type: Type, Name: Name, Sequence: lecStart.text!, Location: lecLocation.text!, StartHour: offDaysString, EndHour: lecEnd.text!)//Laboratory
+            
+            
+            
+            
+            
             
         var lecture="Lecture,"
         lecture=lecture+courseName.text!+","+lecDaysString+","+lecStart.text!+","+lecEnd.text!
         print(lecture)
+        
+        
+        //EventHelper().addAppleEvents(InfoEvent: lecture)
         
         var lab="Lab,"
         lab=lab+courseName.text!+","+labDaysString+","+labStart.text!+","+labEnd.text!
