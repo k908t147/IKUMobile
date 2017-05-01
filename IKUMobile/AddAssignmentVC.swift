@@ -50,7 +50,9 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
                 
                 
                 
+                var Name = assignmentTitle.text!+" - Assignment"
                 
+                EventHelper().addAssignmentEvents(Name: Name, Month: month, Day: day, Time: assignmentDueTime.text!)//Assignment
                 
             //Luis Take "Assignment as paramater to function for calendar
                 
@@ -69,11 +71,19 @@ class AddAssignmentVC: UIViewController, UITextFieldDelegate {
                     DatabaseController.saveContext()
                     
                     
+                    var Name = assignmentTitle.text!+" - Assignment"
+                    
+                    EventHelper().addAssignmentEvents(Name: Name, Month: month, Day: day, Time: assignmentDueTime.text!)//Assignment
                     
                     //Luis, take "Assignment" as the paramater to the function for the calendar
                     
                     let Assignment="Assignment,"+assignmentTitle.text!+","+month+","+day
                     print(Assignment)
+                    
+                   
+                    
+                    
+                    
 
                     navigationController?.popViewController(animated: true)
                     

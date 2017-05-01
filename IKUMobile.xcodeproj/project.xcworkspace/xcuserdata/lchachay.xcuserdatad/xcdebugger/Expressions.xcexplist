@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "EventHelper.(amAppend(str : String) -&gt; String).(closure #1):EventHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "strArr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EventHelper.addAppleEvents(Type : String, Name : String, Sequence : String, Location : String, StartHour : String, EndHour : String) -&gt; ():EventHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.StartDate">
+            </PersistentString>
+            <PersistentString
+               value = "event.startDate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
