@@ -122,10 +122,10 @@ class AddCourseVCViewController: UIViewController, UITextFieldDelegate {
             EventHelper().addAppleEvents(Type: Type, Name: Name, Sequence: lecDaysString, Location: lecLocation.text!, StartHour: lecStart.text!, EndHour: lecEnd.text!)//Lecture
             
             Name = courseName.text!+" - Laboratory"
-            EventHelper().addAppleEvents(Type: Type, Name: Name, Sequence: labDaysString, Location: lecLocation.text!, StartHour: lecStart.text!, EndHour: lecEnd.text!)//Laboratory
+            EventHelper().addAppleEvents(Type: Type, Name: Name, Sequence: labDaysString, Location: labLocation.text!, StartHour: labStart.text!, EndHour: labEnd.text!)//Laboratory
             
             Name = courseName.text!+" - Office"
-            EventHelper().addAppleEvents(Type: Type, Name: Name, Sequence: lecStart.text!, Location: lecLocation.text!, StartHour: offStart.text!, EndHour: lecEnd.text!)//Office
+            EventHelper().addAppleEvents(Type: Type, Name: Name, Sequence: offDaysString, Location: offLocation.text!, StartHour: offStart.text!, EndHour: offEnd.text!)//Office
             
             
             

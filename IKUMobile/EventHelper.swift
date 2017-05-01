@@ -83,11 +83,11 @@ class EventHelper
                     print(e.description)
                     return
                 }
-                
+                /*
                 let MoStartDateF1 = dateformatter.date(from: "2017-05-08T"+MoStartHour24H)
-                event.startDate =  MoStartDateF! as Date
+                event.startDate =  MoStartDateF1! as Date
                 let MoendDateF1 = dateformatter.date(from: "2017-05-08T"+MoEndHour24H)
-                event.endDate =  MoendDateF! as Date
+                event.endDate =  MoendDateF1! as Date
                 event.notes = "KU Calendar"
                 event.calendar = appleEventStore.defaultCalendarForNewEvents
                 do {
@@ -97,6 +97,7 @@ class EventHelper
                     print(e.description)
                     return
                 }
+                */
             }
             ///////////////////////////
             if Tuesday=="1" {
@@ -120,11 +121,11 @@ class EventHelper
                     print(e.description)
                     return
                 }
-                
+                /*
                 let TuStartDateF1 = dateformatter.date(from: "2017-05-09T"+TuStartHour24H)
-                event.startDate =  TuStartDateF! as Date
+                event.startDate =  TuStartDateF1! as Date
                 let TuendDateF1 = dateformatter.date(from: "2017-05-09T"+TuEndHour24H)
-                event.endDate =  TuendDateF! as Date
+                event.endDate =  TuendDateF1! as Date
                 event.notes = "KU Calendar"
                 event.calendar = appleEventStore.defaultCalendarForNewEvents
                 do {
@@ -133,7 +134,7 @@ class EventHelper
                 } catch let e as NSError {
                     print(e.description)
                     return
-                }
+                }*/
             }
             ///////////////////////////
             if Wednesday=="1" {
@@ -157,11 +158,11 @@ class EventHelper
                     print(e.description)
                     return
                 }
-                
+                /*
                 let WeStartDateF1 = dateformatter.date(from: "2017-05-10T"+WeStartHour24H)
-                event.startDate =  WeStartDateF! as Date
+                event.startDate =  WeStartDateF1! as Date
                 let WeendDateF1 = dateformatter.date(from: "2017-05-10T"+WeEndHour24H)
-                event.endDate =  WeendDateF! as Date
+                event.endDate =  WeendDateF1! as Date
                 event.notes = "KU Calendar"
                 event.calendar = appleEventStore.defaultCalendarForNewEvents
                 do {
@@ -170,7 +171,7 @@ class EventHelper
                 } catch let e as NSError {
                     print(e.description)
                     return
-                }
+                }*/
             }
             ///////////////////////////
             if Thursday=="1" {
@@ -191,14 +192,14 @@ class EventHelper
                     try appleEventStore.save(event, span: .thisEvent)
                     //print("events added with dates:")
                 } catch let e as NSError {
-                    print(e.description)
+                //    print(e.description)
                     return
                 }
-                
+                /*
                 let ThStartDateF1 = dateformatter.date(from: "2017-05-11T"+ThStartHour24H)
-                event.startDate =  ThStartDateF! as Date
+                event.startDate =  ThStartDateF1! as Date
                 let ThendDateF1 = dateformatter.date(from: "2017-05-11T"+ThEndHour24H)
-                event.endDate =  ThendDateF! as Date
+                event.endDate =  ThendDateF1! as Date
                 event.notes = "KU Calendar"
                 event.calendar = appleEventStore.defaultCalendarForNewEvents
                 do {
@@ -207,7 +208,7 @@ class EventHelper
                 } catch let e as NSError {
                     print(e.description)
                     return
-                }
+                }*/
             }
             ///////////////////////////
             if Friday=="1" {
@@ -231,11 +232,11 @@ class EventHelper
                     print(e.description)
                     return
                 }
-                
+                /*
                 let FrStartDateF1 = dateformatter.date(from: "2017-05-12T"+FrStartHour24H)
-                event.startDate =  FrStartDateF! as Date
+                event.startDate =  FrStartDateF1! as Date
                 let FrendDateF1 = dateformatter.date(from: "2017-05-12T"+FrEndHour24H)
-                event.endDate =  FrendDateF! as Date
+                event.endDate =  FrendDateF1! as Date
                 event.notes = "KU Calendar"
                 event.calendar = appleEventStore.defaultCalendarForNewEvents
                 do {
@@ -244,7 +245,7 @@ class EventHelper
                 } catch let e as NSError {
                     print(e.description)
                     return
-                }
+                }*/
             }
             ///////////////////////////
             
