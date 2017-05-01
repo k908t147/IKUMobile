@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/AddCourseVCViewController.swift"
-            timestampString = "515316793.31608"
+            timestampString = "515327013.894846"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "addNewCourse(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/AddCourseVCViewController.swift"
-            timestampString = "515316793.31608"
+            timestampString = "515327013.894846"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "addNewCourse(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515316793.31608"
+            timestampString = "515326704.713793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,43 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515316793.31608"
+            timestampString = "515326704.713793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515317893.913864"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515316793.31608"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515318672.589617"
+            timestampString = "515326704.713793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,43 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515321904.721983"
+            timestampString = "515326704.713793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515318956.905274"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515321904.721983"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "amAppend(str:)"
             landmarkType = "7">
             <Locations>
@@ -266,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515321904.721983"
+            timestampString = "515326704.713793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "amAppend(str:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -282,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515321904.721983"
+            timestampString = "515326704.713793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "amAppend(str:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515322420.606149"
+            timestampString = "515326704.713793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "amAppend(str:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,107 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515321340.074152"
+            timestampString = "515326704.713793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515321880.316947"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515321888.822527"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515322155.736945"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515322525.067509"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515322834.358957"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515322962.6906"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
             landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -432,22 +272,6 @@
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IKUMobile/EventHelper.swift"
-            timestampString = "515325261.194442"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "addAppleEvents(Type:Name:Sequence:Location:StartHour:EndHour:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

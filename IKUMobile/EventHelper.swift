@@ -61,61 +61,204 @@ class EventHelper
             print(Thursday)
             var Friday = Sequence[Sequence.index(Sequence.startIndex, offsetBy:4)]
             print(Friday)
-        
+        ///////////////
             if Monday=="1" {
-          
                 let event:EKEvent = EKEvent(eventStore: appleEventStore)
                 event.title = Name
-                let StartHour24H = amAppend(str: StartHour)
-                let EndHour24H = amAppend(str: EndHour)
+                let MoStartHour24H = amAppend(str: StartHour)
+                let MoEndHour24H = amAppend(str: EndHour)
                 let dateformatter = DateFormatter()
                 dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
                 
-                let StartDateF = dateformatter.date(from: "2017-05-01T"+StartHour24H)///
-                event.startDate =  StartDateF! as Date
-                let endDateF = dateformatter.date(from: "2017-05-01T"+EndHour24H)
-                event.endDate =  endDateF! as Date
+                let MoStartDateF = dateformatter.date(from: "2017-05-01T"+MoStartHour24H)///
+                event.startDate =  MoStartDateF! as Date
+                let MoendDateF = dateformatter.date(from: "2017-05-01T"+MoEndHour24H)
+                event.endDate =  MoendDateF! as Date
                 event.notes = "KU Calendar"
                 event.calendar = appleEventStore.defaultCalendarForNewEvents
                 do {
                     try appleEventStore.save(event, span: .thisEvent)
-                //print("events added with dates:")
+                    //print("events added with dates:")
                 } catch let e as NSError {
                     print(e.description)
                     return
                 }
                 
-                let StartDateF = dateformatter.date(from: "2017-05-08T"+StartHour24H)
-                event.startDate =  StartDateF! as Date
-                let endDateF = dateformatter.date(from: "2017-05-08T"+EndHour24H)
-                event.endDate =  endDateF! as Date
+                let MoStartDateF1 = dateformatter.date(from: "2017-05-08T"+MoStartHour24H)
+                event.startDate =  MoStartDateF! as Date
+                let MoendDateF1 = dateformatter.date(from: "2017-05-08T"+MoEndHour24H)
+                event.endDate =  MoendDateF! as Date
                 event.notes = "KU Calendar"
                 event.calendar = appleEventStore.defaultCalendarForNewEvents
-                appleEventStore.save(event, span: .thisEvent)
+                do {
+                    try appleEventStore.save(event, span: .thisEvent)
+                    //print("events added with dates:")
+                } catch let e as NSError {
+                    print(e.description)
+                    return
+                }
             }
+            ///////////////////////////
+            if Tuesday=="1" {
+                let event:EKEvent = EKEvent(eventStore: appleEventStore)
+                event.title = Name
+                let TuStartHour24H = amAppend(str: StartHour)
+                let TuEndHour24H = amAppend(str: EndHour)
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
                 
+                let TuStartDateF = dateformatter.date(from: "2017-05-02T"+TuStartHour24H)///
+                event.startDate =  TuStartDateF! as Date
+                let TuendDateF = dateformatter.date(from: "2017-05-02T"+TuEndHour24H)
+                event.endDate =  TuendDateF! as Date
+                event.notes = "KU Calendar"
+                event.calendar = appleEventStore.defaultCalendarForNewEvents
+                do {
+                    try appleEventStore.save(event, span: .thisEvent)
+                    //print("events added with dates:")
+                } catch let e as NSError {
+                    print(e.description)
+                    return
+                }
                 
+                let TuStartDateF1 = dateformatter.date(from: "2017-05-09T"+TuStartHour24H)
+                event.startDate =  TuStartDateF! as Date
+                let TuendDateF1 = dateformatter.date(from: "2017-05-09T"+TuEndHour24H)
+                event.endDate =  TuendDateF! as Date
+                event.notes = "KU Calendar"
+                event.calendar = appleEventStore.defaultCalendarForNewEvents
+                do {
+                    try appleEventStore.save(event, span: .thisEvent)
+                    //print("events added with dates:")
+                } catch let e as NSError {
+                    print(e.description)
+                    return
+                }
+            }
+            ///////////////////////////
+            if Wednesday=="1" {
+                let event:EKEvent = EKEvent(eventStore: appleEventStore)
+                event.title = Name
+                let WeStartHour24H = amAppend(str: StartHour)
+                let WeEndHour24H = amAppend(str: EndHour)
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
                 
+                let WeStartDateF = dateformatter.date(from: "2017-05-03T"+WeStartHour24H)///
+                event.startDate =  WeStartDateF! as Date
+                let WeendDateF = dateformatter.date(from: "2017-05-03T"+WeEndHour24H)
+                event.endDate =  WeendDateF! as Date
+                event.notes = "KU Calendar"
+                event.calendar = appleEventStore.defaultCalendarForNewEvents
+                do {
+                    try appleEventStore.save(event, span: .thisEvent)
+                    //print("events added with dates:")
+                } catch let e as NSError {
+                    print(e.description)
+                    return
+                }
                 
+                let WeStartDateF1 = dateformatter.date(from: "2017-05-10T"+WeStartHour24H)
+                event.startDate =  WeStartDateF! as Date
+                let WeendDateF1 = dateformatter.date(from: "2017-05-10T"+WeEndHour24H)
+                event.endDate =  WeendDateF! as Date
+                event.notes = "KU Calendar"
+                event.calendar = appleEventStore.defaultCalendarForNewEvents
+                do {
+                    try appleEventStore.save(event, span: .thisEvent)
+                    //print("events added with dates:")
+                } catch let e as NSError {
+                    print(e.description)
+                    return
+                }
+            }
+            ///////////////////////////
+            if Thursday=="1" {
+                let event:EKEvent = EKEvent(eventStore: appleEventStore)
+                event.title = Name
+                let ThStartHour24H = amAppend(str: StartHour)
+                let ThEndHour24H = amAppend(str: EndHour)
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
                 
+                let ThStartDateF = dateformatter.date(from: "2017-05-04T"+ThStartHour24H)///
+                event.startDate =  ThStartDateF! as Date
+                let ThendDateF = dateformatter.date(from: "2017-05-04T"+ThEndHour24H)
+                event.endDate =  ThendDateF! as Date
+                event.notes = "KU Calendar"
+                event.calendar = appleEventStore.defaultCalendarForNewEvents
+                do {
+                    try appleEventStore.save(event, span: .thisEvent)
+                    //print("events added with dates:")
+                } catch let e as NSError {
+                    print(e.description)
+                    return
+                }
                 
+                let ThStartDateF1 = dateformatter.date(from: "2017-05-11T"+ThStartHour24H)
+                event.startDate =  ThStartDateF! as Date
+                let ThendDateF1 = dateformatter.date(from: "2017-05-11T"+ThEndHour24H)
+                event.endDate =  ThendDateF! as Date
+                event.notes = "KU Calendar"
+                event.calendar = appleEventStore.defaultCalendarForNewEvents
+                do {
+                    try appleEventStore.save(event, span: .thisEvent)
+                    //print("events added with dates:")
+                } catch let e as NSError {
+                    print(e.description)
+                    return
+                }
+            }
+            ///////////////////////////
+            if Friday=="1" {
+                let event:EKEvent = EKEvent(eventStore: appleEventStore)
+                event.title = Name
+                let FrStartHour24H = amAppend(str: StartHour)
+                let FrEndHour24H = amAppend(str: EndHour)
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                
+                let FrStartDateF = dateformatter.date(from: "2017-05-05T"+FrStartHour24H)///
+                event.startDate =  FrStartDateF! as Date
+                let FrendDateF = dateformatter.date(from: "2017-05-05T"+FrEndHour24H)
+                event.endDate =  FrendDateF! as Date
+                event.notes = "KU Calendar"
+                event.calendar = appleEventStore.defaultCalendarForNewEvents
+                do {
+                    try appleEventStore.save(event, span: .thisEvent)
+                    //print("events added with dates:")
+                } catch let e as NSError {
+                    print(e.description)
+                    return
+                }
+                
+                let FrStartDateF1 = dateformatter.date(from: "2017-05-12T"+FrStartHour24H)
+                event.startDate =  FrStartDateF! as Date
+                let FrendDateF1 = dateformatter.date(from: "2017-05-12T"+FrEndHour24H)
+                event.endDate =  FrendDateF! as Date
+                event.notes = "KU Calendar"
+                event.calendar = appleEventStore.defaultCalendarForNewEvents
+                do {
+                    try appleEventStore.save(event, span: .thisEvent)
+                    //print("events added with dates:")
+                } catch let e as NSError {
+                    print(e.description)
+                    return
+                }
+            }
+            ///////////////////////////
             
-                
-                
-                
-                
-                
-                
-                
-                
-                
+            
             
 
         
         }
         
         
-        //print("Saved Event")
+        if Type=="0" {
+            
+            
+        }
     }
     
     
