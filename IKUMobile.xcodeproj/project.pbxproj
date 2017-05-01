@@ -25,6 +25,8 @@
 		BD636DB11EA68F4E00E9022B /* Courses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD636DAD1EA68F4E00E9022B /* Courses+CoreDataProperties.swift */; };
 		BD636DB31EA6BC4600E9022B /* UpdateCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD636DB21EA6BC4600E9022B /* UpdateCourse.swift */; };
 		BD636DB51EA7A18F00E9022B /* SelectedAssignmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD636DB41EA7A18F00E9022B /* SelectedAssignmentVC.swift */; };
+		BD6C971D1EB6D07D00FB0553 /* BlackboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6C971C1EB6D07D00FB0553 /* BlackboardVC.swift */; };
+		BD6C971F1EB6D67A00FB0553 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6C971E1EB6D67A00FB0553 /* MapVC.swift */; };
 		BDA4FA111E8CC882008EAE5E /* CourseListTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */; };
 		BDA4FA131E8EECD0008EAE5E /* AddCourseVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */; };
 		BDA4FA151E905579008EAE5E /* SelectedCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA4FA141E905579008EAE5E /* SelectedCourseVC.swift */; };
@@ -74,6 +76,8 @@
 		BD636DAD1EA68F4E00E9022B /* Courses+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BD636DB21EA6BC4600E9022B /* UpdateCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCourse.swift; sourceTree = "<group>"; };
 		BD636DB41EA7A18F00E9022B /* SelectedAssignmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedAssignmentVC.swift; sourceTree = "<group>"; };
+		BD6C971C1EB6D07D00FB0553 /* BlackboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackboardVC.swift; sourceTree = "<group>"; };
+		BD6C971E1EB6D67A00FB0553 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListTVController.swift; sourceTree = "<group>"; };
 		BDA4FA121E8EECCF008EAE5E /* AddCourseVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseVCViewController.swift; sourceTree = "<group>"; };
 		BDA4FA141E905579008EAE5E /* SelectedCourseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedCourseVC.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				BDA4FA101E8CC882008EAE5E /* CourseListTVController.swift */,
 				BD636D9C1EA684AD00E9022B /* IKUMobile.xcdatamodeld */,
 				BD62F29C1E7A16C200402164 /* Main.storyboard */,
+				BD6C971E1EB6D67A00FB0553 /* MapVC.swift */,
+				BD6C971C1EB6D07D00FB0553 /* BlackboardVC.swift */,
 				BDDF34C71EA947FA00887886 /* AllAssignmentListVC.swift */,
 				BD636DB41EA7A18F00E9022B /* SelectedAssignmentVC.swift */,
 				BD0BC41F1EA574AE005F4B00 /* AssignmentListVC.swift */,
@@ -321,6 +327,7 @@
 				BD62F29B1E7A16C200402164 /* ViewController.swift in Sources */,
 				BD0C88FB1E8C883A002223E8 /* DatabaseController.swift in Sources */,
 				BD636DAF1EA68F4E00E9022B /* Assignment+CoreDataProperties.swift in Sources */,
+				BD6C971F1EB6D67A00FB0553 /* MapVC.swift in Sources */,
 				BD0BC4201EA574AE005F4B00 /* AssignmentListVC.swift in Sources */,
 				BDA4FA131E8EECD0008EAE5E /* AddCourseVCViewController.swift in Sources */,
 				BDA4FA111E8CC882008EAE5E /* CourseListTVController.swift in Sources */,
@@ -334,6 +341,7 @@
 				BDA4FA151E905579008EAE5E /* SelectedCourseVC.swift in Sources */,
 				BD636DAE1EA68F4E00E9022B /* Assignment+CoreDataClass.swift in Sources */,
 				BD0BC4221EA574D2005F4B00 /* AddAssignmentVC.swift in Sources */,
+				BD6C971D1EB6D07D00FB0553 /* BlackboardVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
