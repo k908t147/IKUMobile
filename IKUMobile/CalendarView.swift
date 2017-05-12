@@ -1,10 +1,11 @@
 //
-//  MapVC.swift
+//
 //  IKUMobile
 //
 //  Created by Keshawn Triplett on 4/30/17.
 //  Copyright © 2017 Keshawn Triplett. All rights reserved.
-//
+// Written By: Luis Chachayma
+// Tested By: Luis Chachayma
 
 import UIKit
 

@@ -4,7 +4,7 @@
 //
 //  Created by Keshawn Triplett on 4/30/17.
 //  Copyright © 2017 Keshawn Triplett. All rights reserved.
-//
+//  Written by: Arash Kamwand
 
 import UIKit
 

@@ -22,9 +22,10 @@
         <attribute name="offEnd" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="offLocation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="offStart" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assignment" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Assignment" positionX="0" positionY="54" width="128" height="105"/>
-        <element name="Courses" positionX="-9" positionY="36" width="128" height="270"/>
+        <element name="Assignment" positionX="43" positionY="-27" width="128" height="105"/>
+        <element name="Courses" positionX="-279" positionY="-126" width="128" height="283"/>
     </elements>
 </model>

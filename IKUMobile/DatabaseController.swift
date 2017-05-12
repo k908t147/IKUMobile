@@ -4,7 +4,8 @@
 //
 //  Created by Keshawn Triplett on 3/29/17.
 //  Copyright © 2017 Keshawn Triplett. All rights reserved.
-//
+// Written By: Keshawn Triplett
+
 
 import Foundation
 import CoreData
